@@ -38,4 +38,11 @@
 
 9-Logica da calculadora.
     8.1-Cria-se 3 funções iniciais 'Set Operation','add Digit', e 'Clear Memory',ambas retornam inicialmente uma mensagem ou seu respectivo valor ao console para fins de teste.
-    8.2-Inserindo lógica nas funções
+    8.2-A constante inicial state será usada para armazenar valores que serão usados pelas três funções iniciais.
+        displayValue: '0', Valor a ser exibido no display da calculadora
+        clearDisplay: 'false',informa se os valores no display serão substituidos ou não.
+        operation: null,informa qual operação está sendo usada no momento
+        value: [0,0],valores A e B que serão manipulados.
+        current:0,informa qual dos valores A e B está sendo usado no momento
+    Ao fim a função clearMemory retornará para o initial state acima.
+    8.3-
