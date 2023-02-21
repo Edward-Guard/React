@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './App.css';
+import './components/Piano.css';
 
 // Import your audio file
 import Do from "./Notas-Piano/do.wav";
@@ -9,6 +10,8 @@ import Fa from "./Notas-Piano/Fa.wav"
 import La from "./Notas-Piano/La.wav"
 import Sol from "./Notas-Piano/Sol.wav"
 import Si from "./Notas-Piano/Si.wav"
+import Key from "./components/Key";
+
 
  
 
@@ -62,14 +65,27 @@ class App extends Component {
 
   render() {
     return (
-      <div className="teclado">
-        <button className="nota" onClick={this.Do}> Dó </button>
-        <button className="nota" onClick={this.Re}>Ré</button>
-        <button className="nota" onClick={this.Mi}>Mi</button>
-        <button className="nota" onClick={this.Fa}>Fá</button>
-        <button className="nota" onClick={this.Sol}>Sol</button>
-        <button className="nota" onClick={this.La}>LA</button>
-        <button className="nota" onClick={this.Si}>Si</button>
+      <div className="piano">
+        <Key note="c"/>
+        <Key note="df"/>
+        <Key note="d"/>
+        <Key note="ef"/>
+        <Key note="e"/>
+        <Key note="f"/>
+        <Key note="gf"/>
+        <Key note="g"/>
+        <Key note="af"/>
+        <Key note="a"/>
+        <Key note="bf"/>
+        <Key note="b"/>
+        <div><button className="key" onClick={this.Do}> Dó </button></div>
+        <div><button className="key" onClick={this.Re}>Ré</button></div>
+        <div><button className="key" onClick={this.Mi}>Mi</button></div>
+        <div><button className="key" onClick={this.Fa}>Fa</button></div>
+        <div><button className="key" onClick={this.Sol}>Sol</button></div>
+        <div><button className="key" onClick={this.La}>La</button></div>
+        <div><button className="key" onClick={this.Si}>Si</button></div>
+        
       </div>
     );
   }

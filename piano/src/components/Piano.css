@@ -1,0 +1,25 @@
+.key{
+    background-color: white;
+    height: 300px;
+    width: 60px;
+    border: 2px solid black;
+}
+
+.piano{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.key-text{
+    position: relative;
+    color: black;
+    font-weight: 600;
+    font-size: 36px;
+    margin-top: 240px;
+    pointer-events: none;
+    
+    
+}
