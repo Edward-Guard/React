@@ -1,6 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 
+
+
 function App() {
   const [list,setList] = useState([])
   const [undid,setUndid] = useState([])
@@ -17,6 +19,7 @@ function App() {
 
 
   }
+
 
   const handleUndo = (e) =>{
     e.stopPropagation();
@@ -35,6 +38,7 @@ function App() {
   
     const handleReDo = (e) =>{
       e.stopPropagation();
+      
       
 
       if (undid.length === 0 ) {
@@ -56,6 +60,7 @@ function App() {
     <div id="page" onClick={handleclick}>
       <button className='botao' onClick={handleUndo}> Desfazer</button>
       <button className='botao' onClick={handleReDo}> Refazer</button>
+      
       {list.map(item => (
         <span key={item.clientX} className="dot" style={{left: item.clientX,top: item.clientY}}/>
       ))}

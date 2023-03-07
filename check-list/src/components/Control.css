@@ -1,0 +1,40 @@
+.titulo{
+    display: flex;
+    align-items: center;
+    background-color: white;    
+    
+    justify-content: flex-end;
+    
+}
+
+.titulo ul{
+    justify-content: space-between;
+    display: flex;
+    gap: 20px;
+    padding: 6px;
+    padding-bottom: 2px;
+    border: 1px solid black;
+    width: 100%;
+    
+}
+
+.Nome{
+    background-color: white;
+    padding: 8px;
+    border: 1px solid black;
+    
+}
+
+.Botao{
+    background-color: gray;
+    border-radius: 5px;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+}
+
+.Data{
+    padding: 8px;
+    border: 1px solid black;
+}

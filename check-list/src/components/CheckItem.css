@@ -1,0 +1,28 @@
+.tabs{
+    background-color: rgb(165, 165, 165);
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px 5px 0px 0px;
+    
+}
+
+.display-checklist{
+    padding-inline: 10px;
+    
+}
+
+.cellCheck{
+    padding: 8px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    
+    
+}
+
+.display-cellCheck{
+    
+    padding-inline: 10px;
+    display: grid;
+    grid-template-columns: repeat(7,auto);
+}

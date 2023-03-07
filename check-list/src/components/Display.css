@@ -1,0 +1,24 @@
+.display{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+}
+
+.cel{
+    border: 1px solid ;
+    text-align: center;
+    padding: 15px;
+}
+
+.cel.cinza{
+    background-color: rgb(94, 94, 94);
+    
+}
+
+.cel.branco{
+    background-color: white;
+    
+}
+
+.teste{
+    padding-inline: 50px;
+}
