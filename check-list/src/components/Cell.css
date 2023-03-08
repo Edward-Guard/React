@@ -1,0 +1,11 @@
+.cell{
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.text-cell{
+    margin-left: 5px;
+}

@@ -76,12 +76,9 @@ function TicTacToe() {
           </div>
           {winner &&
             <footer>
-              {winner === "E" ? 
-            <h2 className="winner-message">
-              <span className={winner}>Empatou!</span> 
-            </h2>
+              {winner === "E" ? <h2 className="winner-message">
+              <span className={winner}>Empatou!</span> </h2>
               :
-              
               <h2 className="winner-message">
               <span className={winner}>{winner}</span> Venceu! 
               

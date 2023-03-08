@@ -14,15 +14,27 @@
 
 .cellCheck{
     padding: 8px;
-    background-color: white;
+    
     border-bottom: 1px solid black;
+    background-color: white;
+    text-align: center;
+    
+    
+    
     
     
 }
 
-.display-cellCheck{
-    
+.cell-display{
     padding-inline: 10px;
     display: grid;
-    grid-template-columns: repeat(7,auto);
+    grid-template-columns: 1fr 6fr;
+    
+    
+    
+}
+
+.cell-corte{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
 }
