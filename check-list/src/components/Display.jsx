@@ -21,8 +21,8 @@ function Display() {
   return (
     
         <div className='display'>
-        {cellTitle.map((e)=>(<div className='cel cinza'>{e}</div>))}
-        {cellDisplay.map((e)=>(<div className='cel branco'>{e}</div>))}
+        {cellTitle.map((e,index)=>(<div key={index} className='cel cinza'>{e}</div>))}
+        {cellDisplay.map((e,index)=>(<div key={index} className='cel branco'>{e}</div>))}
         </div>
 
     

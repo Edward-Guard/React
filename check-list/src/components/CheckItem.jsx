@@ -1,45 +1,90 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Cell from './Cell'
 import './CheckItem.css'
 
-const cellTitle = [
-    'Acrilico',
-    'PVC',
-    'Reforço',
-    'Móveis',
-    'Divinicell',
-    'Teca'
-]
-
-const itemList= [
-    'Chapa-1','Chapa-2','Chapa-3','Chapa-4','Chapa-5','Chapa-6',
-    'Chapa-1','Chapa-2','Chapa-3','Chapa-4','Chapa-5','Chapa-6',
-    'Chapa-1','Chapa-2','Chapa-3','Chapa-4','Chapa-5','Chapa-6',
-    
-]
-
-const show =(e)=>{
-    console.log(e.target.innerHTML)
-}
 
 function CheckItem() {
+
+    let cellTitle = [
+        'Acrilico',
+        'PVC',
+        'Reforço',
+        'Móveis',
+        'Divinicell',
+        'Teca'
+    ]
+    
+    let [acList,setAcList] = useState(['false','false','false','false','false','false',])
+    let [pvcList,setPvcList] = useState(['false','false','false','false','false','false',])
+    let [reforcoList,setReforcoList] = useState(['false','false','false','false','false','false',])
+    
+    const [change,setChange] = useState('Acrilico');
+    
+    
+    let checkAc = (e,index)=>{
+        let tempArray = [...acList];
+        let value =tempArray[index]
+        tempArray.splice(index,1,!value)
+        setAcList(tempArray)
+    }
+
+    let checkPvc = (e,index)=>{
+        
+        let tempArray = [...pvcList];
+        let value =tempArray[index]
+        tempArray.splice(index,1,!value)
+        setPvcList(tempArray)
+    }
+
+    let checkReforco = (e,index)=>{
+        
+        let tempArray = [...reforcoList];
+        let value =tempArray[index]
+        tempArray.splice(index,1,!value)
+        setReforcoList(tempArray)
+    }
+    
+
+
   return (
 <div>
     <div className='display display-checklist'>
-        {cellTitle.map((e)=>(<div onClick={show} className='tabs'>{e}</div>))}
+        {cellTitle.map((e,index)=>(<div key={index} onClick={()=>setChange(e)} className='tabs'>{e}</div>))}
     </div>
 
-    <div className='cell-display '>
-        <div className='cellCheck'> 
-            <input type="checkbox" name="" id="" />
+    <div  className='cell-display '>
+        <div className='cellCheck'>           
                 PVC 6 MM
         </div>
-        <div className='cell-corte '>{itemList.map((e)=>(<Cell cellCont = {e}/>))}</div>
+        {
+            (change ==='Acrilico') ? <div  className='cell-corte '>{
+                acList.map((e,index)=>(<div key={index} onClick={()=> checkAc(e,index)}>
+                        <Cell class={(e == '') ? 'verde' : 'branco'} cont={change+'-0' +(index+1)}/>
+                 </div>
+                ))
+            }</div> : ''
+        }
+        {
+            (change ==='PVC') ? <div  className='cell-corte '>{
+                pvcList.map((e,index)=>(<div key={index} onClick={()=> checkPvc(e,index,change)}>
+                    <Cell class={(e == '') ? 'verde' : 'branco'}  cont={change+'-0'+(index+1)}/></div>))
+            }</div> : ''
+        }
+
+{
+            (change ==='Reforço') ? <div  className='cell-corte '>{
+                reforcoList.map((e,index)=>(<div key={index} onClick={()=> checkReforco(e,index,change)}>
+                    <Cell class={(e == '') ? 'verde' : 'branco'}  cont={change+'-0'+(index+1)}/></div>))
+            }</div> : ''
+        }
+        
     </div>
 </div>
     
     
   )
+
+  
 }
 
 export default CheckItem

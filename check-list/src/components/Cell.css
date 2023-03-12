@@ -1,11 +1,22 @@
 .cell{
     display: flex;
     justify-content: flex-start;
-    padding: 8px;
-    background-color: white;
-    border-bottom: 1px solid black;
+    
 }
 
 .text-cell{
-    margin-left: 5px;
+    
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    border-bottom: 1px solid black;
 }
+.branco{
+    background-color: white;
+}
+
+.verde{
+    background-color: forestgreen;
+}
+

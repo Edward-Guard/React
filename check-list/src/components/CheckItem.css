@@ -18,11 +18,7 @@
     border-bottom: 1px solid black;
     background-color: white;
     text-align: center;
-    
-    
-    
-    
-    
+
 }
 
 .cell-display{
@@ -38,3 +34,4 @@
     display: grid;
     grid-template-columns: repeat(6,auto);
 }
+
