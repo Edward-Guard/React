@@ -43,8 +43,10 @@ function CheckItem() {
         tempArray.splice(index,1,!value)
         setReforcoList(tempArray)
     }
-    
 
+    
+    
+    ///if (cells.every(cell => cell=== "O")) setWinner("O")
 
   return (
 <div>
@@ -52,18 +54,33 @@ function CheckItem() {
         {cellTitle.map((e,index)=>(<div key={index} onClick={()=>setChange(e)} className='tabs'>{e}</div>))}
     </div>
 
-    <div  className='cell-display '>
-        <div className='cellCheck'>           
-                PVC 6 MM
+    <div  className='cell-display'>
+    {    
+    (change ==='Acrilico') ? <div >
+        <div className={`cellCheck  ${(acList.every(cell => cell == false)) ?'verde': ''}`}>           
+                PVC 8 MM
         </div>
+    </div> : ''
+    }
         {
-            (change ==='Acrilico') ? <div  className='cell-corte '>{
+            (change ==='Acrilico') ? <div  className='cell-corte '>
+                
+                {
                 acList.map((e,index)=>(<div key={index} onClick={()=> checkAc(e,index)}>
                         <Cell class={(e == '') ? 'verde' : 'branco'} cont={change+'-0' +(index+1)}/>
                  </div>
                 ))
             }</div> : ''
         }
+
+{    
+        (change ==='PVC') ? <div >
+            <div className={`cellCheck  ${(pvcList.every(cell => cell == false)) ?'verde': ''}`}>           
+                    PVC 6 MM
+            </div>
+        </div> : ''
+        }
+        
         {
             (change ==='PVC') ? <div  className='cell-corte '>{
                 pvcList.map((e,index)=>(<div key={index} onClick={()=> checkPvc(e,index,change)}>
