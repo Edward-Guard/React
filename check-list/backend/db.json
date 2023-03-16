@@ -1,0 +1,25 @@
+{
+    "checkItem":[{
+        "id":1,
+        "barco":"Z-480-01",
+        "acList":[false,false,false,false,false,false],
+        "pvcList":[false,false,false,false,false,false],
+        "reforcoList":[false,false,false,false,false,false],
+        "moveisList":[false,false,false,false,false,false],
+        "dvcList":[false,false,false,false,false,false],
+        "tecaList":[false,false,false,false,false,false]
+    },
+    {
+        "id":2,
+        "barco":"Z-380-01",
+        "acList":[false,false,false,false,false,false],
+        "pvcList":[false,false,false,false,false,false],
+        "reforcoList":[false,false,false,false,false,false],
+        "moveisList":[false,false,false,false,false,false],
+        "dvcList":[false,false,false,false,false,false],
+        "tecaList":[false,false,false,false,false,false]
+    }
+
+]
+    
+}
